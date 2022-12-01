@@ -1,1 +1,1 @@
-# web_study
+# study_note
