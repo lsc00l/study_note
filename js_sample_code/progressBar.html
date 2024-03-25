@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .content{
+    display: flex; justify-content: center;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <link rel="stylesheet" href="css/progressBar.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="content">
+    <div class="header">
+      <input type="number" id="gage" min="1" max="100">
+      <button type="button" id="submitBtn">그리기</button>
+    </div>
+    <div class="chart-bar">
+        <span id="bar01" class="-bar _gage-25"></span>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  
+  <script type="text/javascript">
+
+    $('#submitBtn').on('click', function() {
+      setBarGage('bar01', $('#gage').val());
+    });
+
+    let setBarGage = function(barId, gage){
+      $('#'+barId).removeClass();
+      $('#'+barId).addClass('-bar _gage-'+ gage);
+    };
+
+  </script>
+</body>
+
+</html>

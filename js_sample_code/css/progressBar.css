@@ -1,0 +1,404 @@
+
+.chart-bar { height: 24px; border-radius: 4px; background: #dadada; overflow: hidden; width:100px; }
+
+.chart-bar .-bar { display: block; width: 0; transition: width .3s; height: 100%; background: #2794b2; }
+
+.chart-bar ._gage-1 { width: 1%; }
+
+.chart-bar ._gage-1::before { content: "1%"; padding-left: 10px; color: #000; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-2 { width: 2%; }
+
+.chart-bar ._gage-2::before { content: "2%"; padding-left: 10px; color: #000; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-3 { width: 3%; }
+
+.chart-bar ._gage-3::before { content: "3%"; padding-left: 10px; color: #000; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-4 { width: 4%; }
+
+.chart-bar ._gage-4::before { content: "4%"; padding-left: 10px; color: #000; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-5 { width: 5%; }
+
+.chart-bar ._gage-5::before { content: "5%"; padding-left: 10px; color: #000; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-6 { width: 6%; }
+
+.chart-bar ._gage-6::before { content: "6%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-7 { width: 7%; }
+
+.chart-bar ._gage-7::before { content: "7%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-8 { width: 8%; }
+
+.chart-bar ._gage-8::before { content: "8%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-9 { width: 9%; }
+
+.chart-bar ._gage-9::before { content: "9%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-10 { width: 10%; }
+
+.chart-bar ._gage-10::before { content: "10%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-11 { width: 11%; }
+
+.chart-bar ._gage-11::before { content: "11%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-12 { width: 12%; }
+
+.chart-bar ._gage-12::before { content: "12%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-13 { width: 13%; }
+
+.chart-bar ._gage-13::before { content: "13%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-14 { width: 14%; }
+
+.chart-bar ._gage-14::before { content: "14%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-15 { width: 15%; }
+
+.chart-bar ._gage-15::before { content: "15%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-16 { width: 16%; }
+
+.chart-bar ._gage-16::before { content: "16%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-17 { width: 17%; }
+
+.chart-bar ._gage-17::before { content: "17%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-18 { width: 18%; }
+
+.chart-bar ._gage-18::before { content: "18%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-19 { width: 19%; }
+
+.chart-bar ._gage-19::before { content: "19%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-20 { width: 20%; }
+
+.chart-bar ._gage-20::before { content: "20%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-21 { width: 21%; }
+
+.chart-bar ._gage-21::before { content: "21%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-22 { width: 22%; }
+
+.chart-bar ._gage-22::before { content: "22%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-23 { width: 23%; }
+
+.chart-bar ._gage-23::before { content: "23%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-24 { width: 24%; }
+
+.chart-bar ._gage-24::before { content: "24%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-25 { width: 25%; }
+
+.chart-bar ._gage-25::before { content: "25%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-26 { width: 26%; }
+
+.chart-bar ._gage-26::before { content: "26%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-27 { width: 27%; }
+
+.chart-bar ._gage-27::before { content: "27%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-28 { width: 28%; }
+
+.chart-bar ._gage-28::before { content: "28%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-29 { width: 29%; }
+
+.chart-bar ._gage-29::before { content: "29%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-30 { width: 30%; }
+
+.chart-bar ._gage-30::before { content: "30%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-31 { width: 31%; }
+
+.chart-bar ._gage-31::before { content: "31%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-32 { width: 32%; }
+
+.chart-bar ._gage-32::before { content: "32%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-33 { width: 33%; }
+
+.chart-bar ._gage-33::before { content: "33%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-34 { width: 34%; }
+
+.chart-bar ._gage-34::before { content: "34%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-35 { width: 35%; }
+
+.chart-bar ._gage-35::before { content: "35%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-36 { width: 36%; }
+
+.chart-bar ._gage-36::before { content: "36%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-37 { width: 37%; }
+
+.chart-bar ._gage-37::before { content: "37%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-38 { width: 38%; }
+
+.chart-bar ._gage-38::before { content: "38%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-39 { width: 39%; }
+
+.chart-bar ._gage-39::before { content: "39%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-40 { width: 40%; }
+
+.chart-bar ._gage-40::before { content: "40%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-41 { width: 41%; }
+
+.chart-bar ._gage-41::before { content: "41%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-42 { width: 42%; }
+
+.chart-bar ._gage-42::before { content: "42%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-43 { width: 43%; }
+
+.chart-bar ._gage-43::before { content: "43%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-44 { width: 44%; }
+
+.chart-bar ._gage-44::before { content: "44%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-45 { width: 45%; }
+
+.chart-bar ._gage-45::before { content: "45%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-46 { width: 46%; }
+
+.chart-bar ._gage-46::before { content: "46%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-47 { width: 47%; }
+
+.chart-bar ._gage-47::before { content: "47%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-48 { width: 48%; }
+
+.chart-bar ._gage-48::before { content: "48%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-49 { width: 49%; }
+
+.chart-bar ._gage-49::before { content: "49%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-50 { width: 50%; }
+
+.chart-bar ._gage-50::before { content: "50%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-51 { width: 51%; }
+
+.chart-bar ._gage-51::before { content: "51%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-52 { width: 52%; }
+
+.chart-bar ._gage-52::before { content: "52%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-53 { width: 53%; }
+
+.chart-bar ._gage-53::before { content: "53%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-54 { width: 54%; }
+
+.chart-bar ._gage-54::before { content: "54%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-55 { width: 55%; }
+
+.chart-bar ._gage-55::before { content: "55%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-56 { width: 56%; }
+
+.chart-bar ._gage-56::before { content: "56%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-57 { width: 57%; }
+
+.chart-bar ._gage-57::before { content: "57%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-58 { width: 58%; }
+
+.chart-bar ._gage-58::before { content: "58%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-59 { width: 59%; }
+
+.chart-bar ._gage-59::before { content: "59%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-60 { width: 60%; }
+
+.chart-bar ._gage-60::before { content: "60%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-61 { width: 61%; }
+
+.chart-bar ._gage-61::before { content: "61%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-62 { width: 62%; }
+
+.chart-bar ._gage-62::before { content: "62%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-63 { width: 63%; }
+
+.chart-bar ._gage-63::before { content: "63%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-64 { width: 64%; }
+
+.chart-bar ._gage-64::before { content: "64%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-65 { width: 65%; }
+
+.chart-bar ._gage-65::before { content: "65%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-66 { width: 66%; }
+
+.chart-bar ._gage-66::before { content: "66%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-67 { width: 67%; }
+
+.chart-bar ._gage-67::before { content: "67%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-68 { width: 68%; }
+
+.chart-bar ._gage-68::before { content: "68%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-69 { width: 69%; }
+
+.chart-bar ._gage-69::before { content: "69%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-70 { width: 70%; }
+
+.chart-bar ._gage-70::before { content: "70%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-71 { width: 71%; }
+
+.chart-bar ._gage-71::before { content: "71%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-72 { width: 72%; }
+
+.chart-bar ._gage-72::before { content: "72%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-73 { width: 73%; }
+
+.chart-bar ._gage-73::before { content: "73%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-74 { width: 74%; }
+
+.chart-bar ._gage-74::before { content: "74%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-75 { width: 75%; }
+
+.chart-bar ._gage-75::before { content: "75%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-76 { width: 76%; }
+
+.chart-bar ._gage-76::before { content: "76%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-77 { width: 77%; }
+
+.chart-bar ._gage-77::before { content: "77%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-78 { width: 78%; }
+
+.chart-bar ._gage-78::before { content: "78%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-79 { width: 79%; }
+
+.chart-bar ._gage-79::before { content: "79%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-80 { width: 80%; }
+
+.chart-bar ._gage-80::before { content: "80%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-81 { width: 81%; }
+
+.chart-bar ._gage-81::before { content: "81%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-82 { width: 82%; }
+
+.chart-bar ._gage-82::before { content: "82%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-83 { width: 83%; }
+
+.chart-bar ._gage-83::before { content: "83%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-84 { width: 84%; }
+
+.chart-bar ._gage-84::before { content: "84%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-85 { width: 85%; }
+
+.chart-bar ._gage-85::before { content: "85%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-86 { width: 86%; }
+
+.chart-bar ._gage-86::before { content: "86%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-87 { width: 87%; }
+
+.chart-bar ._gage-87::before { content: "87%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-88 { width: 88%; }
+
+.chart-bar ._gage-88::before { content: "88%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-89 { width: 89%; }
+
+.chart-bar ._gage-89::before { content: "89%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-90 { width: 90%; }
+
+.chart-bar ._gage-90::before { content: "90%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-91 { width: 91%; }
+
+.chart-bar ._gage-91::before { content: "91%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-92 { width: 92%; }
+
+.chart-bar ._gage-92::before { content: "92%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-93 { width: 93%; }
+
+.chart-bar ._gage-93::before { content: "93%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-94 { width: 94%; }
+
+.chart-bar ._gage-94::before { content: "94%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-95 { width: 95%; }
+
+.chart-bar ._gage-95::before { content: "95%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-96 { width: 96%; }
+
+.chart-bar ._gage-96::before { content: "96%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-97 { width: 97%; }
+
+.chart-bar ._gage-97::before { content: "97%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-98 { width: 98%; }
+
+.chart-bar ._gage-98::before { content: "98%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-99 { width: 99%; }
+
+.chart-bar ._gage-99::before { content: "99%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }
+
+.chart-bar ._gage-100 { width: 100%; }
+
+.chart-bar ._gage-100::before { content: "100%"; padding-left: 10px; color: #fff; line-height: 25.5px; font-weight: 400; }

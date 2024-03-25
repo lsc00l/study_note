@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>            
+        table td {
+            vertical-align: top;
+            width: 50px;
+            height: 50px;
+        }
+        table tbody tr:hover>th,
+        table tbody tr:hover>td {background: transparent; text-align: center; width:100px; height:100px}
+
+        /* 현재 날짜 */
+        .-today {position: relative; background-color: #f5f5f5}
+        .-today::before { content: ''; display: block; position: absolute; left: 0; top: 0; right: 0; width: 100%; height: 100%; border: 2px solid #2794b2; }
+        .-today .-day {color: #006c8a}
+        .-today .cardboard { background-color: #2794b2; border-top-color: transparent; border-radius: 4px}
+        .-today .cardboard .-label,
+        .-today .cardboard .-content { color: #fff}
+        .-today .-day { font-weight: 800 }
+
+
+    </style>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"/>
+    <title>Document</title>
+</head>
+<body>
+    
+    <button type="button" id="before"><i class="fas fa-caret-left"></i></button>
+    <span id="yearmonth" class="-month"></span>
+    <button type="button" id="next"><i class="fas fa-caret-right"></i></button>
+    <table id="calendar">
+        <thead>
+          <tr>
+            <th>일</th>
+            <th>월</th>
+            <th>화</th>
+            <th>수</th>
+            <th>목</th>
+            <th>금</th>
+            <th>토</th>
+          </tr>
+        </thead>
+        <tbody id="calendarBody">         
+        </tbody>
+      </table>
+
+        <span>선택한 날짜 : </span>     
+        <div id="detailDate" class="-date"></div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      
+  <script>
+    var today = new Date(); // 오늘 날짜
+    var date = new Date();
+
+    $(document).ready(function () {
+        
+        build();		//캘린더 그리기
+        buildDetail();  //오늘 날짜
+
+    });
+
+        
+    //이전달 클릭
+    $('#before').on('click', function(){
+        today = new Date(today.getFullYear(), today.getMonth() - 1, today.getDate());
+        build(); //캘린더 build
+        buildDetail();
+    });
+
+    //다음달 클릭
+    $('#next').on('click', function(){
+        today = new Date(today.getFullYear(), today.getMonth() + 1, today.getDate());
+        build(); //캘린더 build
+        buildDetail();
+    })
+
+
+    //날짜 클릭시 td 값 가져오기
+    $(document).on("click", "#calendar tr td", function(){
+		// 현재 클릭된 (td)
+		var td = $(this); 
+		
+		if(!td.hasClass("cDay")){//빈칸 td 선택 안되게
+			return false;
+		}
+		
+		//선택한 날짜 배경 설정
+		$('.cDay').removeClass('-today');
+		td.addClass("-today");
+		
+		var day 	= td.children().eq(0).text();
+		
+		today = new Date(today.getFullYear(), today.getMonth(), day);//today 설정		
+		
+		buildDetail();	//상세 운영 스케줄 data
+	});
+
+    
+    //달력 draw
+    function build()
+    {
+
+        var nMonth = new Date(today.getFullYear(), today.getMonth(), 1); //현재달의 첫째 날
+        var lastDate = new Date(today.getFullYear(), today.getMonth() + 1, 0); //현재 달의 마지막 날
+        var tbcal = document.getElementById("calendar"); // 테이블 달력을 만들 테이블
+        var yearmonth = document.getElementById("yearmonth"); //  년도와 월 출력할곳
+        yearmonth.innerHTML = today.getFullYear() + ". "+ ('0' + (today.getMonth() + 1)).slice(-2) ; //년도와 월 출력
+        
+        var yearmonth = document.getElementById("detailDate"); //  오늘의 년월일
+        yearmonth.innerHTML = today.getFullYear() + ". "+ ('0' + (today.getMonth() + 1)).slice(-2) + ". "+ ('0' + today.getDate()).slice(-2) ; //년도와 월 출력
+        
+        // 남은 테이블 줄 삭제
+        while (tbcal.rows.length > 1) 
+        {
+            tbcal.deleteRow(tbcal.rows.length-1);
+        }
+        var row = null;
+        row = tbcal.insertRow();
+        var cnt = 0;
+        
+        // 1일 시작칸 찾기
+        for (i = 0; i < nMonth.getDay(); i++) 
+        {
+            cell = row.insertCell();
+            cnt = cnt + 1;
+        }
+        
+        // 달력 날짜 출력
+        for (i = 1; i <= lastDate.getDate(); i++) // 1일부터 마지막 일까지
+        {
+            cell = row.insertCell();
+            cell.id = "d"+ i;
+            cell.className = "cDay";
+            cell.innerHTML = "<div class='-day' >"+i+"</div>";
+            cnt = cnt + 1;
+            if (cnt % 7 == 1) {//일요일 계산
+                cell.innerHTML = "<font color=red>" + i//일요일에 색
+            }
+            if (cnt % 7 == 0) { // 1주일이 7일 이므로 토요일 계산
+                cell.innerHTML = "<font color=blue>" + i//토요일에 색
+                row = calendar.insertRow();// 줄 추가
+            }
+            if( i==today.getDate())
+            {
+                cell.className = "-today cDay";	//오늘 날짜 css 설정
+            }
+        }
+        
+        // 달력 나머지 칸 채우기
+        for (i = lastDate.getDay(); i < 7-1; i++) 
+        {
+            cell = row.insertCell();
+        }
+        
+    }//build() end	
+    //상세 운영 스케줄 data
+	function buildDetail(){
+		var yearmonth = document.getElementById("detailDate"); //  오늘의 년월일
+	    yearmonth.innerHTML = today.getFullYear() + "-"+ ('0' + (today.getMonth() + 1)).slice(-2) + "-"+ ('0' + today.getDate()).slice(-2) ; //년도와 월 출력
+    }
+
+  </script>
+</body>
+</html>

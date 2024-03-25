@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<style>
+  .content{
+    display: flex;justify-content: center;
+  }
+  .contents-body{
+    width:200px; border: 1px solid;
+  }
+  .contents-body .item-group{
+    display: flex;flex-direction: column;align-items: flex-start;padding-left: 20px;
+  }
+  .side-botton-group {
+    display: flex; flex-direction: column; justify-content: center; margin-left: 20px;
+  }
+  .side-botton-group .btn:first-child{
+    margin-bottom: 10px;
+  }
+  .item{
+    width: 100%;
+      display: flex;
+    background-color: #ffffff;
+  }
+  .item.-click{
+    background-color: darkgray;
+  }
+  .item:hover{
+    background-color:darkgray;
+  }
+</style>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+  <title>Document</title>
+</head>
+
+<body>
+
+  <div class="content">
+    <div class="contents-body">
+      <div class="item-group" id="itemsDiv">
+        <div class="item" data-order="1"> AAA </div>
+        <div class="item" data-order="2"> BBB </div>
+        <div class="item" data-order="3"> CCC </div>
+        <div class="item" data-order="4"> DDD </div>
+        <div class="item" data-order="5"> EEE </div>
+      </div>
+    </div>
+    <div class="side-botton-group">
+      <button class="btn" onclick="itemUp('itemsDiv');"><i class="fa fa-arrow-up"></i></button>
+      <button class="btn" onclick="itemDown('itemsDiv');"><i class="fa fa-arrow-down"></i></button>
+    </div>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script type="text/javascript">
+
+    var getSorted = function(selector, attrName) {
+        return $(
+          $(selector).toArray().sort(function(a, b){
+              var aVal = parseInt(a.getAttribute(attrName)),
+                  bVal = parseInt(b.getAttribute(attrName));
+              return aVal - bVal;
+          })
+        );
+    };
+    // $sorted_items = getSorted('#'+divName+' .item', 'data-order').clone();
+    // $('#divName').html( $sorted_items );
+
+
+    $('.item').on("click", function(){
+      $(this).parent().find('.item').removeClass('-click');
+      $(this).addClass("-click");
+    });
+
+    function itemUp(divName){
+      let thisObj = $(".item.-click");
+      let itemLength = thisObj.siblings().length +1;
+      let thisOrder = thisObj.attr('data-order');
+
+      if(thisOrder == 1 || 1 == itemLength) return;
+
+      let changeOrder = Number(thisOrder) - 1;
+      let changeObj = $('.item[data-order='+changeOrder+']');
+      changeObj.attr("data-order", thisOrder);
+      thisObj.attr('data-order', changeOrder);
+
+      // $sorted_items = getSorted('#'+divName+' .item', 'data-order').clone();
+      // $('#'+divName).html( $sorted_items );
+      $('#'+divName).html(getSorted('#'+divName+' .item', 'data-order'));
+      
+    }
+
+    function itemDown(divName){
+      let thisObj = $(".item.-click");
+      let itemLength = thisObj.siblings().length +1;
+      let thisOrder = thisObj.attr('data-order');
+      
+      if(thisOrder == itemLength) return;
+
+      let changeOrder = Number(thisOrder) + 1;
+      let changeObj = $('.item[data-order='+changeOrder+']');
+      changeObj.attr("data-order", thisOrder);
+      thisObj.attr('data-order', changeOrder);
+
+      $sorted_items = getSorted('#'+divName+' .item', 'data-order').clone();
+      $('#'+divName).html( $sorted_items );
+    }
+
+    //up : 0 , down : 1
+    function moveItem(divName, upDown){
+      let up = (upDown == 0) ? true : false;
+
+      let thisObj = $(".item.-click");
+      let totalCnt = thisObj.siblings().length + 1;
+      let thisOrder =  Number(thisObj.attr('data-order'));
+
+      if(up && thisOrder == 1) return;
+      if(!up && thisOrder == totalCnt) return;
+
+      let changeOrder = (up) ? thisOrder - 1 :  thisOrder + 1; 
+      let changeObj = $('.item[data-order='+changeOrder+']');
+      changeObj.attr("data-order", thisOrder);
+      thisObj.attr('data-order', changeOrder);
+
+      $('#'+divName).html(getSorted('#'+divName+' .item', 'data-order'));
+    }
+  </script>
+</body>
+
+</html>
