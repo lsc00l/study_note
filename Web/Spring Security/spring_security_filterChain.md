@@ -1,4 +1,4 @@
-# Spring Security
+# Spring Security Filter Chain
 
 ## 인증(Authentication)과 권한(Authorization)
 
