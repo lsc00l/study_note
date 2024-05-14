@@ -48,13 +48,12 @@ public class OtpService {
      * @param secretKey
      * @return
      */
-    public String generateQrCodeUrl(String accountName, String secretKey) {
-         String url = "https://www.google.com/chart?chs=200x200&chld=M|0&cht=qr&chl=otpauth://totp/"
-                + accountName + "?secret=" + secretKey;
+    public String generateQrCodeUrl(String accountName, GoogleAuthenticatorKey key) {
+        String qrCodeUrl = GoogleAuthenticatorQRGenerator.getOtpAuthURL(accountName, accountName, key);
 
-//         logger.debug("QR URL %%%%%%%%%%%%%%%%%%%%% : {}", url);
+         logger.debug("QR URL %%%%%%%%%%%%%%%%%%%%% : {}", qrCodeUrl);
 
-        return url;
+        return qrCodeUrl;
 
     }
 
